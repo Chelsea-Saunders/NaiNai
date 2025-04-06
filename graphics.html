@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics</title>
+    <link rel="stylesheet" href="styles/nai-nai.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="Logo_link" href="index-nai-nai.html">
+                <img class="logo" src="images/imagecompressor/rsz_1logo-min.png" alt="NaiNai Logo">
+            </a>
+            <nav>
+                <a href="index-nai-nai.html">Home</a>
+                <a href="graphics.html">Graphic Prints</a>
+                <a href="custom-orders.html">Custom Orders</a>
+                <!-- Button to open the modal login form -->
+                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+                <!-- The Modal -->
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="container">
+                            <label id="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label id="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit" class="submit">Submit</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="psw-container" style="background-color: transparent">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw-container">Forgot <a href="psw-container">password?</a></span>
+                            <script src="index.js"></script>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="page-title">
+                <h1 class="title-msg">Graphics</h1>
+                <p>When ask what other products people would like to see 
+                available, there were many remarks on wanting clothing items 
+                that depict the real western lifestyles of the customer 
+                without requiring them to change or settle for cookie-cutter, 
+                factory produced products available in bulk. From this, NaiNai 
+                Leather & Creations started a graphics line. Unlike many 
+                graphic companies who simply copy and paste an image off the 
+                internet, NaiNai Leather & Creations sees an image or takes a 
+                picture of a scene then, goes home and creates the image from 
+                scratch and ends up with digital creations that are truly one 
+                of a kind. These graphics are then printed onto any number of 
+                materials, giving not only unique styles of clothing but also 
+                unprecedented images on the clothing. If you are looking for 
+                something that is one of a kind, hand crafted from scratch, 
+                and that will be the talk of…well, wherever you’ll be, and 
+                that won’t leave a hole in your wallet, this is where you need 
+                to shop. NaiNai’s takes custom orders on just about anything 
+                and gives you your money’s worth and then some.</p>
+            </section>
+
+            <div class="row">
+                <div class="tie">
+                    <img src="images/imagecompressor/brown-saddle-tie-min.png" alt="Tie" style="width:100%">
+                    <div class="tie-cart-container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script>
+                    //Java for add to cart button on home page
+                        addToCartButton = document.querySelectorAll(".add-to-cart-button");
+                        
+                        document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButton) {
+                            addToCartButton.addEventListener('click', function() {
+                                addToCartButton.classList.add('added');
+                                setTimeout(function(){
+                                    addToCartButton.classList.remove('added');
+                                }, 2000);
+                            });
+                        });
+                        </script>
+                    </div>
+                </div>
+                <div class="graphic-phone-case">
+                    <img src="images/imagecompressor/rsz_1graphics_phone_case.png" alt="Phone Case" style="width:100%">
+                    <div class="phone-case-cart-container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script>
+                    //Java for add to cart button on home page
+                        addToCartButton = document.querySelectorAll(".add-to-cart-button");
+                        
+                        document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButton) {
+                            addToCartButton.addEventListener('click', function() {
+                                addToCartButton.classList.add('added');
+                                setTimeout(function(){
+                                    addToCartButton.classList.remove('added');
+                                }, 2000);
+                            });
+                        });
+                        </script>
+                    </div>
+                </div>
+                <div class="onsie">
+                    <img src="images/imagecompressor/rsz_onsie.png" alt="Onsie" style="width:100%">
+                    <div class="onsie-cart-container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script>
+                    //Java for add to cart button on home page
+                        addToCartButton = document.querySelectorAll(".add-to-cart-button");
+                        
+                        document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButton) {
+                            addToCartButton.addEventListener('click', function() {
+                                addToCartButton.classList.add('added');
+                                setTimeout(function(){
+                                    addToCartButton.classList.remove('added');
+                                }, 2000);
+                            });
+                        });
+                        </script>
+                    </div>
+                    <script>
+                    //Java for add to cart button on home page
+                        addToCartButton = document.querySelectorAll(".graphics-cart-button");
+                        
+                        document.querySelectorAll('.graphics-cart-button').forEach(function(addToCartButton) {
+                            addToCartButton.addEventListener('click', function() {
+                                addToCartButton.classList.add('added');
+                                setTimeout(function(){
+                                    addToCartButton.classList.remove('added');
+                                }, 2000);
+                            });
+                        });
+                        </script>
+                </div>
+              </div>
+        </main>
+        <footer>
+            <div class="social">
+                <a href="https://www.instagram.com/nainaiphotoandleather/?igsh=cGdkMXZtMGlsaTh6" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <p>
+                <a href=site-plan.html>Site Plan</a>
+            </p>
+            <p>NaiNai Leather & Creations &copy; 2024 - Chelsea Saunders</p>
+        </footer>
+    </div>
+</body>
+</html>

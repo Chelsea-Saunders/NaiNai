@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/nai-nai.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a id="Logo_link" href="index-nai-nai.html">
+                <img class="logo" src="images/imagecompressor/rsz_1logo-min.png" alt="NaiNai Logo">
+            </a>
+            <nav>
+                <a href="index-nai-nai.html">Home</a>
+                <a href="graphics.html">Graphic Prints</a>
+                <a href="custom-orders.html">Custom Orders</a>
+                <!-- Button to open the modal login form -->
+                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+                    <!-- The Modal -->
+                    <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                    class="close" title="Close Modal">&times;</span>
+
+                    <!-- Modal Content -->
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="container">
+                            <label id="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label id="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit" class="submit">Submit</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                            </div>
+
+                            <div class="psw-container" style="background-color: transparent">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw-container">Forgot <a href="psw-container">password?</a></span>
+                            <script src="index.js"></script>
+                        </div>
+                    </form>
+                    </div>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="page-title">
+                <h1 class="title-msg">Pre-Made Products</h1>
+                <p>Here at NaiNai Leather & Creations, we offer unprecedented and 
+                hand-crafted leatherwork and custom graphic designs. Have you 
+                ever gone to a craft show and been drawn into the beautiful 
+                leather, hand-made items? They all claimed to be hand crafted 
+                and unique. But have you ever picked up a piece and look it 
+                over and thought, "No doubt it was beautiful but it was 
+                obvious to even an untrained eye that this is most definitely 
+                NOT hand crafted"? Well, perhaps the staining or painting was 
+                authentic but the actual leatherwork wasn't. Then, you flipped 
+                the tag over and had to pick your jaw up off the floor, seeing 
+                the astronomical prices? Yes, the piece was real leather but 
+                the bragged about handtooling wasn't and they were pricing it 
+                as if it were. Knowing what life’s like on a farm, and 
+                understanding the reality of having to scrimp for good quality 
+                stuff but also knowing how important it is to have good, 
+                long-lasting quality, and having been raised around leather 
+                work but never had time to get into it seriously, got me 
+                thinking, I wonder if I could make high-quality, hand-crafted 
+                items for a reasonable price. After a few years of practicing, 
+                people started noticing the quality and uniqueness and wanted 
+                me to make stuff for them and NaiNai Leather & Creations was 
+                born. The love making a genuine product that are strikingly 
+                beautiful, with unmatched designs all while keeping it at a 
+                price that every hard-working American can afford.</p>
+            </section>
+            <!-- pre-made parent -->
+            <div class="pre-made-grid">
+                <section class="hair-clip-card">
+                    <img class="hair-clip-img" src="images/imagecompressor/rsz_2hair-clip-rotated-min.png" alt="Hair Clip">
+                    <h2>Hair Clip</h2>
+                    <div class="container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script src="index.js"></script>
+                    </div>
+                </section>
+                <section class="bill-fold-card">
+                    <img class="bill-fold-img" src="images/imagecompressor/rsz_2bill-fold-min.png" alt="Bill Fold">
+                    <h2>Bill Fold</h2>
+                    <div class="container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script src="index.js"></script>
+                    </div>
+                </section>
+                <section class="phone-holster-card">
+                    <img class="phone-holster-img" src="images/imagecompressor/rsz_1belt-attachment-rotated-min.png" alt="Phone Holster">
+                    <h2>Phone & Knife Holster</h2>
+                    <div class="container">
+                        <button class="add-to-cart-button">
+                             <svg class="add-to-cart-box box-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="add-to-cart-box box-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="2" fill="#ffffff"/></svg>
+                             <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                             <svg class="tick" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#ffffff" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0L10 14.17l6.88-6.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-7.59 7.59c-.38.39-1.02.39-1.41 0z"/></svg>
+                             <span class="add-to-cart">Add to cart</span>
+                             <span class="added-to-cart">Added to cart</span>
+                         </button>
+                    <script>
+                    //Java for add to cart button on home page
+                        addToCartButton = document.querySelectorAll(".add-to-cart-button");
+                        
+                        document.querySelectorAll('.add-to-cart-button').forEach(function(addToCartButton) {
+                            addToCartButton.addEventListener('click', function() {
+                                addToCartButton.classList.add('added');
+                                setTimeout(function(){
+                                    addToCartButton.classList.remove('added');
+                                }, 2000);
+                            });
+                        });
+                        </script>
+                    </div>
+                </section>
+            </div>
+
+
+        </main>
+        <footer>
+            <div class="social">
+                <a href="https://www.instagram.com/nainaiphotoandleather/?igsh=cGdkMXZtMGlsaTh6" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+            <p><a href=site-plan.html>Site Plan</a></p>
+            <p>NaiNai Leather & Creations &copy; 2024 - Chelsea Saunders</p>
+        </footer>
+    </div>
+</body>
+</html>
