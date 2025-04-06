@@ -7,27 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles/nai-nai.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
+    <header>
+        <a id="logo-link" href="index.html">
+            <img class="logo" src="images/imagecompressor/logo.jpg" alt="Logo">
+        </a>
+    </header>
     <div id="content">
-        <header>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/imagecompressor/logo.jpg" alt="Logo">
-            </a>
-        </header>
         <main class="main">
             <nav class="page-links"> 
-                <section class="shop-all">
+                <section class="main-button" data-link="shop-all.html">
                     <img id="shop-all" src="./images/imagecompressor/mr-mrs.jpg" alt="Champaine Glasses with handmade leather grips">
                     <p>Shop All</p>
                 </section>
-                <section class="wearables">
-                    <img id="wearables" src="./images/imagecompressor/onsie.png" alt="Tooled Leather Birkenstocks">
+                <section class="main-button" data-link="wearable.html">
+                    <img id="wearables" src="./images/imagecompressor/onsie.png" alt="Hand drawn graphics, printed on onsie">
                     <p>Wearables</p>
                 </section>
-                <section class="leather">
-                    <img id="leather" src="./images/imagecompressor/birkenstocks.png">
+                <section class="main-button" data-link="leather.html">
+                    <img id="leather" src="./images/imagecompressor/birkenstocks.png" alt="Tooled leather birkenstocks">
                     <p>Leather</p>
+                </section>
+                <section class="main-button" data-link="about-me.html">
+                    <img id="bio" src="./images/imagecompressor/nai.jpg" alt="Image of Chenai">
+                    <p>About Me</p>
                 </section>
             </nav>
 

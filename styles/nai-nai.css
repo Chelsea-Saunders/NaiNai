@@ -4,19 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
 
 
-#logo_link {
+#logo-link {
   justify-self: center;
   align-self: center;
-  width: 100%;
+  width: 80%;
+  padding: 20px;
 }
 .logo {
   border-top: 5px solid white;
   border-left: 10px solid white;
   border-right: 10px solid white;
-  width: 100%;
+  width: 90%;
   transition: transform .5s;
 }
-.shop-all, .wearables, .leather {
+.main-button {
   background-color: white;
   color: black;
   text-align: center;
@@ -30,8 +31,13 @@
   box-shadow: 5px 5px 10px #6f7364;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-#shop-all, #wearables, #leather {
+.main-button:hover {
+  transform: scale(1.03);
+}
+#shop-all, #wearables, #leather, #bio {
   border-radius: 125%;
   width: 50% !important;
   padding-top: 15px;
@@ -49,4 +55,28 @@ footer {
   position: relative;
   width: 100%;
   z-index: 1000;
+}
+
+/* ABOUT ME PAGE */
+#about-me {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #6f7364; 
+}
+#bio-about-me {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  /* border: #6f7364 solid 1px; */
+  width: 75% !important;
+  box-shadow: 5px 5px 10px #6f7364;
+  padding: 20px;
+  margin-top: 20px;
 }
