@@ -6,54 +6,114 @@ const itemList = document.querySelector("#item-list");
 // an array for all items
 const items = [
   {
-    name: "",
+    name: "Mr & Mrs Champagne Glasses",
     price: "$0.00",
     description: "Handmade with love and precision.",
-    image: "./images/imagecompressor/calanders.jpg"
+    image: "./images/imagecompressor/mr-mrs.jpg"
   }, 
   {
-    name: "",
+    name: "Mr & Mrs Champagne Glasses",
     price: "$0.00",
     description: "Handmade with love and precision.",
-    image: "./images/imagecompressor/calanders.jpg"
+    image: "./images/imagecompressor/mr-mrs.jpg"
   },
   {
-    name: "",
+    name: "Mr & Mrs Champagne Glasses",
     price: "$0.00",
     description: "Handmade with love and precision.",
-    image: "./images/imagecompressor/calanders.jpg"
+    image: "./images/imagecompressor/mr-mrs.jpg"
   },
   {
-    name: "",
+    name: "Mr & Mrs Champagne Glasses",
     price: "$0.00",
     description: "Handmade with love and precision.",
-    image: "./images/imagecompressor/calanders.jpg"
+    image: "./images/imagecompressor/mr-mrs.jpg"
   },
   {
-    name: "",
+    name: "Mr & Mrs Champagne Glasses",
     price: "$0.00",
     description: "Handmade with love and precision.",
-    image: "./images/imagecompressor/calanders.jpg"
+    image: "./images/imagecompressor/mr-mrs.jpg"
   }
 ];
 const leather = [
   {
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg"
-  }
-]
+    name: "Leather Birkens", 
+    price: "$0.00", 
+    description: "Leather Birkenstocks", 
+    image: "./images/imagecompressor/birkenstocks.png"
+    },
+    {
+    name: "Leather Birkens", 
+    price: "$0.00", 
+    description: "Leather Birkenstocks", 
+    image: "./images/imagecompressor/birkenstocks.png"
+    },
+    {
+    name: "Leather Birkens", 
+    price: "$0.00", 
+    description: "Leather Birkenstocks", 
+    image: "./images/imagecompressor/birkenstocks.png"
+    },
+    {
+    name: "Leather Birkens", 
+    price: "$0.00", 
+    description: "Leather Birkenstocks", 
+    image: "./images/imagecompressor/birkenstocks.png"
+    }
+];
 const wearable = [
   {
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg",
-    name: "Graphic Onsie", price: "$0.00", description: "Soft cotton onsie", image: "./images/imagecompressor/onsie.jpg"
+    name: "Graphic Onsie", 
+    price: "$0.00", 
+    description: "Soft cotton onsie", 
+    image: "./images/imagecompressor/brown-saddle-tie-min.png"
+  },
+  {
+    name: "Graphic Onsie", 
+    price: "$0.00", 
+    description: "Soft cotton onsie", 
+    image: "./images/imagecompressor/brown-saddle-tie-min.png"
+  },
+  {
+    name: "Graphic Onsie", 
+    price: "$0.00", 
+    description: "Soft cotton onsie", 
+    image: "./images/imagecompressor/brown-saddle-tie-min.png"
+  },
+  {
+    name: "Graphic Onsie", 
+    price: "$0.00", 
+    description: "Soft cotton onsie", 
+    image: "./images/imagecompressor/brown-saddle-tie-min.png"
   }
-]
+];
+const custom = [
+  {
+    name: "Welding Helmet", 
+    price: "$TBD", 
+    description: "Custom welding helmet",
+    image: "./images/imagecompressor/welding-helmet.jpg"
+  },
+  {
+    name: "Welding Helmet", 
+    price: "$TBD", 
+    description: "Custom welding helmet",
+    image: "./images/imagecompressor/welding-helmet.jpg"
+  },
+  {
+    name: "Welding Helmet", 
+    price: "$TBD", 
+    description: "Custom welding helmet",
+    image: "./images/imagecompressor/welding-helmet.jpg"
+  },
+  {
+    name: "Welding Helmet", 
+    price: "$TBD", 
+    description: "Custom welding helmet",
+    image: "./images/imagecompressor/welding-helmet.jpg"
+  }
+];
 
 
 // Clickable image buttons
@@ -85,12 +145,12 @@ function renderItems(containerId, itemArray) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  itemArray.ForEach(item => {
+  itemArray.forEach(item => {
     const card = document.createElement("div");
     card.classList.add("item-card");
 
     card.innerHTML = `
-    <img src=${item.image}" alt=${item.name}">
+    <img src="${item.image}" alt="${item.name}">
     <h3>${item.name}</h3>
     <p>${item.description}</p>
     <span class="price">${item.price}</span>
@@ -100,6 +160,8 @@ function renderItems(containerId, itemArray) {
 }
 //call the other lists after function is defined
 document.addEventListener("DOMContentLoaded", function() {
-  renderItems("leather-items", leather);
-  renderItems("wearable-items", wearable);
+  renderItems("leather-list", leather);
+  renderItems("wearable-list", wearable);
+  renderItems("custom-list", custom);
+  renderItems("item-list", items);
 });
