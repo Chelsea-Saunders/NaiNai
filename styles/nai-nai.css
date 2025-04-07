@@ -18,7 +18,7 @@ align-items: center;
 img.dropdown {
   display: block;
   margin: 0 auto;
-  width: 20%;
+  width: 15%;
   padding: 20px;
   font-family: 'Antonio', sans-serif;
   font-size: 1em;
@@ -49,6 +49,34 @@ img.dropdown:hover {
   background-color: #f0f0f0;
   color: #333;
 }
+.login-button {
+  background-color: #6f7364;
+  color: white;
+  border: none;
+  padding: 10px; 
+  margin-top: 10px;
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+.login-button:hover {
+  background-color: #555;
+}
+.login-link {
+  display: inline-block;
+  background-color: #6f7364;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Antonio', sans-serif;
+  transition: background-color 0.3s ease;
+}
 .main-button {
   background-color: white;
   color: #6f7364;
@@ -72,7 +100,8 @@ img.dropdown:hover {
 .main-button:hover {
   transform: scale(1.03);
 }
-#shop-all, #wearables, #leather, #bio {
+#shop-all, #wearables, #leather, 
+#bio, #custom-leather {
   border-radius: 125%;
   width: 50% !important;
   padding-top: 15px;
@@ -96,7 +125,7 @@ footer {
 #about-me {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #6f7364;
   margin: 20px auto;
@@ -112,6 +141,24 @@ footer {
   position: relative;
   justify-self: center;
   align-self: center;
+  border-radius: 10px;
+  width: 80% !important;
+  box-shadow: 5px 5px 10px #6f7364;
+  padding: 20px;
+  margin-bottom: 75px;
+}
+
+/* CUSTOM LEATHER */
+#description {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  border-radius: 10px;
   width: 80% !important;
   box-shadow: 5px 5px 10px #6f7364;
   padding: 20px;
