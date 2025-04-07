@@ -5,162 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles/nai-nai.css">
-    <link rel="javascript" href="index.js">
+    <script src="./index.js" defer></script>
 </head>
 <body>
-    <div id="content">
-        <header>
-            <a id="Logo_link" href="index.html">
-                <img class="logo" src="images/imagecompressor/rsz_1logo-min.png" alt="NaiNai Logo">
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="graphics.html">Graphic Prints</a>
-                <a href="custom-orders.html">Custom Orders</a>
-                <!-- Button to open the modal login form -->
-                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+    <header class="header">
+        <img class="logo" src="images/imagecompressor/logo.jpg" alt="Logo">
+        
+        <div class="dropdown-container">
+            <img class="dropdown" src="./images/imagecompressor/dropdown.png">
 
-                    <!-- The Modal -->
-                    <div id="id01" class="modal">
-                    <span onclick="document.getElementById('id01').style.display='none'"
-                    class="close" title="Close Modal">&times;</span>
-
-                    <!-- Modal Content -->
-                    <form class="modal-content animate" action="/action_page.php">
-                        <div class="container">
-                            <label id="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-
-                            <label id="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-
-                            <button type="submit" class="submit">Submit</button>
-                            <label>
-                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
-                            </div>
-
-                            <div class="psw-container" style="background-color: transparent">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <span class="psw-container">Forgot <a href="psw-container">password?</a></span>
-                            <script>//Java for log in page on nav tab
-                                // Get the modal
-                                var modal = document.getElementById('id01');
-                                
-                                // When the user clicks anywhere outside of the modal, close it 
-                                window.onclick = function(event) {
-                                  if (event.target == modal) {
-                                    modal.style.display = "none";
-                                  }
-                                }</script>
-                        </div>
-                    </form>
-                    </div>
+            <nav class="dropdown-links">
+                <a href="shop-all.html">Shop All</a>
+                <a href="wearable.html">Wearables</a>
+                <a href="leather.html">Leather</a>
+                <a href="about-me.html">About Me</a>
             </nav>
-        </header>
-        <main>
-            <section class="page-title">
-                <h1 class="title-msg">Custom Orders</h1>
-                <p></p>
-            </section>
-            <!-- custom orders image parent -->
+        </div>
+    </header>
 
-            <div class="scroll-container">
-                <img src="images/imagecompressor/rsz_4birkenstocks-min.png" class="birkenstocks" alt="Birkenstocks">
-                <img src="images/imagecompressor/rsz_1wallet.png" class="wallet" alt="Wallet">
-                <img src="images/imagecompressor/rsz_5phone-case.png" class="leather-phone-case" alt="Phone Case">
-                <img src="images/imagecompressor/rsz_4taysia-heels.png" class="heels" alt="Heels">
-                <img src="images/imagecompressor/rsz_hats-with-skull-min.png" class="hats" alt="Hats">
-                <img src="images/imagecompressor/rsz_leather-toed-shoes-min.png" class="shoes" alt="Shoes">
-                <img src="images/imagecompressor/rsz_skillet-handle-potholder.png" class="skillet-handle" alt="Skillet-Handle">
-                <img src="images/imagecompressor/rsz_spur.png" class="spur-strap" alt="Spur Strap">
-                <img src="images/imagecompressor/rsz_twistedx-shoes.png" class="twisted-shoes" alt="Twisted Shoes">
-              </div>
-              <p>(Swipe for more images)</p>
-
-              <div id="feedback">
-                <h2>Custom Order Form</h2>
-                <form action="/my-handling-form-page" 
-                method="post">
-                    <ul>
-                        <li>
-                            <label for="name">Name:</label>
-                            <!-- On the <input> element, the most important attribute 
-                            is the type attribute. This attribute is extremely 
-                            important because it defines the way the <input> element 
-                            appears and behaves -->
-                            <!-- we use the value text for the first input — the 
-                            default value for this attribute. It represents a basic 
-                            single-line text field that accepts any kind of text 
-                            input. -->
-                            <input type="text" id="name"
-                            
-                name="user_name" >
-                    <li> 
-                    <label for="mail">Email:</label>
-                    <!-- On the <input> element, the most important attribute 
-                    is the type attribute. This attribute is extremely 
-                    important because it defines the way the <input> element 
-                    appears and behaves -->
-                    <!-- we use the value email, which defines a single-line text 
-                    field that only accepts a well-formed email address. This turns 
-                    a basic text field into a kind of "intelligent" field that will 
-                    perform some validation checks on the data typed by the user. 
-                    It also causes a more appropriate keyboard layout for entering 
-                    email addresses (e.g. with an @ symbol by default) to appear on 
-                    devices with dynamic keyboards, like smartphones. -->
-                    <!-- The <input> tag is a void element, meaning that it doesn't 
-                    need a closing tag -->
-                    <input type="email" id="mail"
-                name="user_email">
-                    <li>
-                        <label for="order">Order Description: </label>
-                        <!--  <textarea> is not a void element, meaning it should be 
-                        closed with the proper ending tag. This has an impact on 
-                        a specific feature of forms: the way you define the 
-                        default value. -->
-                        <textarea id="order" name="user_message">
-                </textarea>
-                    <!-- The <button> element also accepts a type attribute — this 
-                    accepts one of three values: submit, reset, or button.
-                    A click on a submit button (the default value) sends the form's 
-                    data to the web page defined by the action attribute of the <form>
-                    element -->
-                    <li class="button">
-                        <button type="submit">Submit
-                        </button>
-                    </ul>
-                </form>
-            </div>
-        </main>
-        <footer>
-            <div class="social">
-                <a href="https://www.instagram.com/nainaiphotoandleather/?igsh=cGdkMXZtMGlsaTh6" target="_blank">
-                    <img src="images/instagram.png" alt="instagram icon">
-                </a>
-            </div>
-            <p><a href=site-plan.html>Site Plan</a></p>
-            <p>NaiNai Leather & Creations &copy; 2024 - Chelsea Saunders</p>
-        </footer>
-    </div>
-        <script>
-            // get the feedback div element so we can do something with it.
-            const feedbackElement = document.getElementById('feedback');
-            // get the form so we can read what was entered in it.
-            const formElement = document.forms[0];
-            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
-            formElement.addEventListener('submit', function(e) {
-                // stop the form from doing the default action.
-                e.preventDefault();
-                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
-                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your order request. We will get back with you as soon as possible!';
-                // make the feedback element visible.
-                feedbackElement.style.display = "block";
-                // add a class to move everything down so our message doesn't cover it.
-                document.body.classList.toggle('moveDown');
-            });
-        </script>
-    </body>
+    <footer>
+        <div class="social">
+            <a href="https://www.instagram.com/nainaiphotoandleather/" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+        <p>NaiNai Leather & Creations &copy; 2024 - Chelsea Saunders</p>
+    </footer>
+</div>
+</body>
 </html>

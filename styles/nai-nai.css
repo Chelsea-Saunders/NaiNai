@@ -65,6 +65,8 @@ img.dropdown:hover {
   margin-bottom: 20px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  /* margin-top: 100px; */
+  margin-bottom: 75px;
 }
 .main-button:hover {
   transform: scale(1.03);
