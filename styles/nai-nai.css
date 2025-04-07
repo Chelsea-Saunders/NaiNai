@@ -4,11 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
 
 
-#logo-link {
-  justify-self: center;
-  align-self: center;
-  width: 80%;
-  padding: 20px;
+.header {
+justify-content: center;
+align-items: center;
 }
 .logo {
   border-top: 5px solid white;
@@ -16,6 +14,40 @@
   border-right: 10px solid white;
   width: 90%;
   transition: transform .5s;
+}
+img.dropdown {
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  padding: 20px;
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  justify-self: center;
+  align-self: center;
+  border-radius: 125%;
+}
+img.dropdown:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+.dropdown-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.dropdown-links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.dropdown-links a:hover {
+  background-color: #f0f0f0;
+  color: #333;
 }
 .main-button {
   background-color: white;
@@ -61,9 +93,12 @@ footer {
 #about-me {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px #6f7364; 
+  box-shadow: 5px 5px 10px #6f7364;
+  margin: 20px auto;
+  margin-top: 100px;
+  margin-bottom: 75px;
 }
 #bio-about-me {
   background-color: white;
