@@ -1,6 +1,6 @@
 const images = document.querySelectorAll(".main-button");
 const toggle = document.querySelector(".dropdown-toggle");
-const menu = document.querySelector(".dropdown-menu");
+const menu = document.querySelector(".dropdown-links");
 
 images.forEach(function (img) {
   img.addEventListener("click", function() {
