@@ -3,6 +3,10 @@ const toggle = document.querySelector(".dropdown-toggle");
 const menu = document.querySelector(".dropdown-links");
 const loginButton = document.querySelector(".login-button");
 const itemList = document.querySelector("#item-list");
+const chatToggle = document.getElementById("chatToggle");
+const chatBox = document.getElementById("chatBox");
+const closeChat = document.getElementById("closeChat");
+const chatForm = document.getElementById("chatForm");
 // an array for all items
 const items = [
   {
@@ -165,3 +169,35 @@ document.addEventListener("DOMContentLoaded", function() {
   renderItems("custom-list", custom);
   renderItems("item-list", items);
 });
+
+// chat toggle logic
+if (chatToggle && chatBox && closeChat) {
+  chatToggle.addEventListener("click", function() {
+    chatBox.style.display = "block";
+  });
+  closeChat.addEventListener("click", function() {
+    chatBox.style.display = "none";
+  });
+}
+//chat toggle logic
+if (chatForm) {
+  chatForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // this will stop the page from refreshing/reloading
+
+    console.log(document.getElementById("chatMessage")); //
+
+    // get values (you can also send this to a real backend later)
+    // const name = document.getElementById("chatName").value;
+    const message = document.getElementById("chatMessage").value;
+    console.log("Message:", message); // just to confirm it's working
+
+    // customize the alert
+    alert(`Thanks! Your message was sent.`);
+
+    // reset the form and hide the chat box
+    chatBox.style.display = "none";
+
+    // reset the form
+    chatForm.reset();
+  });
+}
