@@ -7,6 +7,7 @@ const chatToggle = document.getElementById("chatToggle");
 const chatBox = document.getElementById("chatBox");
 const closeChat = document.getElementById("closeChat");
 const chatForm = document.getElementById("chatForm");
+
 // an array for all items
 const items = [
   {

@@ -17,7 +17,7 @@ align-items: center;
   display: block;
   margin: 0 auto;
 }
-img.dropdown {
+img.dropdown-toggle {
   display: block;
   margin: 0 auto;
   width: 15%;
@@ -28,7 +28,7 @@ img.dropdown {
   align-self: center;
   border-radius: 125%;
 }
-img.dropdown:hover {
+img.dropdown-toggle:hover {
   transform: scale(1.03);
   cursor: pointer;
 }
