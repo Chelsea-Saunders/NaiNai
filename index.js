@@ -403,7 +403,8 @@ images.forEach(function (img) {
 // Dropdown menu toggle (only if toggle exists)
 if (toggle && menu) {
   toggle.addEventListener("click", function () {
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    menu.classList.toggle("show");
+    // menu.style.display = menu.style.display === "flex" ? "none" : "flex";
   });
 }
 
