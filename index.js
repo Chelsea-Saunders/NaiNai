@@ -7,6 +7,16 @@ const chatToggle = document.getElementById("chatToggle");
 const chatBox = document.getElementById("chatBox");
 const closeChat = document.getElementById("closeChat");
 const chatForm = document.getElementById("chatForm");
+const slider = document.getElementById("slider");
+// const slides = slider.querySelector(".slides");
+// const totalSlides = slides.children.length;
+
+let slides, totalSlides;
+
+if (slides) {
+  slides = slider.querySelector(".slides");
+  totalSlides = slides.children.length;
+}
 
 // an array for all items
 const items = [
@@ -441,6 +451,31 @@ document.addEventListener("DOMContentLoaded", function() {
   renderItems("wearable-list", wearable);
   renderItems("custom-list", custom);
   renderItems("item-list", items);
+
+  const slider = document.getElementById("slider");
+  if (!slider) return;
+
+  const slides = slider.querySelector(".slides");
+  const totalSlides = slides.children.length;
+  let currentIndex = 0;
+  let startX = 0;
+  let isDragging = false;
+  slider.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+    isDragging = false;
+
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && currentIndex < totalSlides - 1) {
+        currentIndex++;
+      } else if (diff < 0 && currentIndex > 0) {
+        currentIndex--;
+      }
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  })
 });
 
 // chat toggle logic
@@ -474,3 +509,29 @@ if (chatForm) {
     chatForm.reset();
   });
 }
+
+// slide show logic
+// let currentIndex = 0;
+// let startX = 0;
+// let isDragging = false;
+// slider.addEventListener("touchstart", e => {
+//   startX = e.touches[0].clientX;
+//   isDragging = true;
+// });
+// slider.addEventListener("touchmove", e => {
+//   if (!isDragging) return;
+// });
+// slider.addEventListener("touchend", e => {
+//   isDragging = false;
+//   const endX = e.changedTouches[0].clientX;
+//   const diff = startX - endX;
+
+//   if (Math.abs(diff) > 50) {
+//     if (diff > 0 && currentIndex < totalSlides - 1) {
+//       currentIndex++; // swipe left
+//     } else if (diff < 0 && currentIndex > 0) {
+//       currentIndex--; // swipe right
+//     }
+//   }
+//   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+// });
