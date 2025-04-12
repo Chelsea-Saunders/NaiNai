@@ -333,8 +333,11 @@ p#two {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 .slides img {
+  flex: 0 0 100%; /* each image takes up 100% of the slider */
+  max-width: 100%;
   width: 100%;
   flex-shrink: 0;
   pointer-events: none; /* so finger swipes */
