@@ -323,6 +323,7 @@ p#two {
 /* CUSTOM LEATHER PAGE */
 .slider {
   overflow: hidden;
+  position: relative;
   width: 100%;
   max-width: 600px;
   margin: 40px auto;
@@ -333,7 +334,7 @@ p#two {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
+  width: calc(100% * number-of-images);;
 }
 .slides img {
   flex: 0 0 100%; /* each image takes up 100% of the slider */
