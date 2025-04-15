@@ -321,25 +321,54 @@ p#two {
   margin-bottom: 75px;
 }
 /* CUSTOM LEATHER PAGE */
-.slider {
+.slider-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  display: flex;
   position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px #6f7364;
-  touch-action: pan-y;
+  transform: translateX(0); /*this will make this move more to the right */
+  transition: transform 0.3s ease-out;
+  cursor: grab;
 }
-.slides {
+.slideX {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: calc(100% * number-of-images);;
+  width: 100%;
+  height: 100%;
+}
+.slides {
+  /* display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; */
+  flex: 0 0 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  /* padding: 1rem; */
+  user-select: none;
 }
 .slides img {
-  flex: 0 0 100%; /* each image takes up 100% of the slider */
-  max-width: 100%;
-  width: 100%;
-  flex-shrink: 0;
-  pointer-events: none; /* so finger swipes */
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: transform 0.3s ease-in-out;
+}
+.slides h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 1em;
+  margin-bottom: .5rem;
+}
+.grabbing {
+  cursor: grabbing;
+}
+.grabbing .slides img {
+  transform: scale(0.9);
 }

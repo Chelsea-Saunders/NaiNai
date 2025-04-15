@@ -407,11 +407,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const toggle = document.querySelector(".dropdown-toggle");
   const menu = document.querySelector(".dropdown-links");
   const loginButton = document.querySelector(".login-button");
-  const itemList = document.querySelector("#item-list");
   const chatToggle = document.getElementById("chatToggle");
   const chatBox = document.getElementById("chatBox");
   const closeChat = document.getElementById("closeChat");
   const chatForm = document.getElementById("chatForm");
+  const slider = document.querySelector(".slideX");
+  const slides = Array.from(document.querySelectorAll(".slides"));
 
   // render items
   renderItems("leather-list", leather);
@@ -463,35 +464,104 @@ document.addEventListener("DOMContentLoaded", function() {
       chatForm.reset();
     });
   }
-
   // slider logic
-  const slider = document.getElementById("slider");
-  if (slider) {
-    const slides = slider.querySelector(".slides");
-    const totalSlides = slides.children.length;
-    // slides.style.width = `${totalSlides * 100}%`;
+  let isDragging = false,
+     startposition = 0, 
+     currentTranslate = 0, 
+     previousTranslate = 0, 
+     animationID = 0, 
+     currentIndex = 0;
 
-    let currentIndex = 0;
-    let startX = 0;
+  slides.forEach ((slide, index) => {
+    const slideImage = slide.querySelector('img')
+    slideImage.addEventListener('dragstart', (e) => e.preventDefault());
 
-    slider.addEventListener("touchstart", e => {
-      startX = e.touches[0].clientX;
-      // isDragging = true;
-    });
+    // touch events
+    slide.addEventListener("touchstart", (e) => touchStart(index)(e));
+    slide.addEventListener("touchend", touchEnd)
+    slide.addEventListener("touchmove", touchMove)
 
-    slider.addEventListener("touchend", e => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
+    // mouse events
+    slide.addEventListener("mousedown", (e) => touchStart(index)(e));
+    slide.addEventListener("mouseup", touchEnd)
+    slide.addEventListener("mouseleave", touchEnd)
+    slide.addEventListener("mousemove", touchMove)
+  });
 
-      if (Math.abs(diff) > 50) {
-        if (diff > 0 && currentIndex < totalSlides - 1) {
-          currentIndex++;
-        } else if (diff < 0 && currentIndex > 0) {
-          currentIndex--;
-        }
-        
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-      });
+  // disable 
+  window.oncontextmenu = function(event) {
+    const target = event.target;
+
+    // only block rightclick on images inside the slider
+    if (target.closest(".slider-container img")) {
+      event.preventDefault();
+      event.stopPropagataion();
+      return false;
     }
+
+    // allow right-click elsewhere on page
+    return true;
+  }
+  // window.oncontextmenu = function(event) {
+  //   event.preventDefault();
+  //   event.stopPropagaion();
+  //   return false;
+  // }
+  currentPosition = 0;
+
+  // function setSliderPostion(position) {
+  //   slider.style.transform = `translateX(${position}px)`
+  // };
+
+  function touchStart(index) {
+    return function (event) {
+      currentIndex = index;
+      startPosition = getPositionX(event);
+        console.log(startPosition);
+      isDragging = true;
+
+      // animation - request animation frame
+      animationID = requestAnimationFrame(animation);
+      slider.classList.add("grabbing");
+    }
+  };
+  function touchEnd() {
+    isDragging = false;
+    cancelAnimationFrame(animationID);
+
+    const movedBy = currentTranslate - previousTranslate;
+
+    // this will make the slides go to the right
+    if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
+
+    // this will make the slides move left
+    if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+
+    setPositionByIndex();
+
+    slider.classList.remove("grabbing");
+  };
+  function touchMove(event) {
+    if (isDragging) {
+    const currentPosition = getPositionX(event);
+    currentTranslate = previousTranslate + currentPosition - startPosition;
+    }
+  };
+  function getPositionX(event) {
+    return event.type.includes('mouse') 
+    ? event.pageX 
+    : event.touches[0].clientX;
+  };
+  function animation() {
+    setSliderPosition();
+    if(isDragging) requestAnimationFrame(animation);
+  };
+  function setSliderPosition() {
+    slider.style.transform = `translateX(${currentTranslate}px)`
+  }
+  function setPositionByIndex() {
+    currentTranslate = currentIndex * -window.innerWidth;
+    previousTranslate = currentTranslate;
+    setSliderPosition();
+  }
 });
