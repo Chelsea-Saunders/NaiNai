@@ -132,6 +132,10 @@ img.dropdown-toggle:hover {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+/* #bio {
+  padding-top: 35px;
+  padding-bottom: 30px;
+} */
 .chat-container {
   position: fixed;
   bottom: 20px;
@@ -371,6 +375,10 @@ p#two {
   .page-links-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "shop custom"
+      "wearables leather"
+      "about .";
     gap: 1rem;
   }
 }
@@ -380,6 +388,15 @@ p#two {
   .page-links-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "about custom shop"
+      "wearables leather .";
     gap: 1rem;
   }
+
+  .about-me       { grid-area: about; }
+  .custom-leather { grid-area: custom; }
+  .shop-all       { grid-area: shop; }
+  .wearables      { grid-area: wearables; }
+  .leather        { grid-area: leather; }
 }
