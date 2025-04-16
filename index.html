@@ -17,28 +17,33 @@
     </header>
     <div id="content">
         <main class="main">
-            <nav class="page-links"> 
-                <section class="main-button" data-link="about-me.html">
-                    <img id="bio" src="./images/imagecompressor/nai.jpg" alt="Image of Chenai">
-                    <p>About Me</p>
-                </section>
-                <section class="main-button" data-link="shop-all.html">
-                    <img id="shop-all" src="./images/imagecompressor/mr-mrs.jpg" alt="Champaine Glasses with handmade leather grips">
-                    <p>Shop All</p>
-                </section>
-                <section class="main-button" data-link="leather.html">
-                    <img id="leather" src="./images/imagecompressor/birkenstocks.png" alt="Tooled leather birkenstocks">
-                    <p>Leather</p>
-                </section>
-                <section class="main-button" data-link="wearable.html">
-                    <img id="wearables" src="./images/imagecompressor/brown-saddle-tie-min.png" alt="Hand drawn graphics, printed on onsie">
-                    <p>Wearables</p>
-                </section>
-                <section class="main-button" data-link="custom-leather.html">
-                    <img id="custom-leather" src="./images/imagecompressor/welding-helmet.jpg" alt="hand crafted calanders">
-                    <p>Custom Leather</p>
-                </section>
+            <nav class="page-links-container">
+                <nav class="column-one"> 
+                    <section class="main-button" data-link="about-me.html">
+                        <img id="bio" src="./images/imagecompressor/nai.jpg" alt="Image of Chenai">
+                        <p>About Me</p>
+                    </section>
+                    <section class="main-button" data-link="shop-all.html">
+                        <img id="shop-all" src="./images/imagecompressor/mr-mrs.jpg" alt="Champaine Glasses with handmade leather grips">
+                        <p>Shop All</p>
+                    </section>
+                    <section class="main-button" data-link="leather.html">
+                        <img id="leather" src="./images/imagecompressor/birkenstocks.png" alt="Tooled leather birkenstocks">
+                        <p>Leather</p>
+                    </section>
+                </nav>
+                <nav class="column-two">
+                    <section class="main-button" data-link="wearable.html">
+                        <img id="wearables" src="./images/imagecompressor/brown-saddle-tie-min.png" alt="Hand drawn graphics, printed on onsie">
+                        <p>Wearables</p>
+                    </section>
+                    <section class="main-button" data-link="custom-leather.html">
+                        <img id="custom-leather" src="./images/imagecompressor/welding-helmet.jpg" alt="hand crafted calanders">
+                        <p>Custom Leather</p>
+                    </section>
+                </nav>
             </nav>
+            <!-- Chat Bubble -->
             <div class="chat-container">
                 <div class="chat-bubble" id="chatToggle">💬</div>
                 <div class="chat-box" id="chatBox">
@@ -47,22 +52,16 @@
                         <button id="closeChat">x</button>
                     </div>
                     <div class="chat-body">
-                        <form id="chatForm">
-                            <label for="message">Hi! Do you have a question or want to special order a product? Let's talk aboutit!</label>
-                            <textarea id="chatMessage" name="message" rows="4" required></textarea><br>
+                        <form id="chat-form">
+                            <label for="chat-message">
+                                Hi! Do you have a question or want to special order a product? Let's talk aboutit!
+                            </label>
+                            <textarea id="chat-message" name="message" rows="4" required></textarea><br>
                             <button type="submit">Send</button>
                         </form>
-                        <!-- <p>Hi! Have a question or want to order something? Lets talk about it!</p>
-                        <a href="mailto:countrygirlnainai@hotmail.com">📧Send me an email</a> -->
                     </div>
                 </div>
             </div>
-            <!-- <a href="mailto:countrygirlnainai@hotmail.com" class="contact-bubble" title="Email Me">
-                ✉️
-            </a>
-            <a href="tel:+15412120533" class="contact-bubble" title="Call Me">
-                📞
-            </a> -->
         </main>
         <footer>
             <div class="social">
