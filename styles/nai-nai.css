@@ -131,11 +131,13 @@ img.dropdown-toggle:hover {
   width: 50% !important;
   padding-top: 15px;
   padding-bottom: 15px;
+  /* background-position: center;
+  object-fit: cover; */
 }
-/* #bio {
+#bio {
   padding-top: 35px;
-  padding-bottom: 30px;
-} */
+  padding-bottom: 35px;
+}
 .chat-container {
   position: fixed;
   bottom: 20px;
