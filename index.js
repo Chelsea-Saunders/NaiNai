@@ -498,20 +498,9 @@ document.addEventListener("DOMContentLoaded", function() {
       event.stopPropagataion();
       return false;
     }
-
-    // allow right-click elsewhere on page
     return true;
   }
-  // window.oncontextmenu = function(event) {
-  //   event.preventDefault();
-  //   event.stopPropagaion();
-  //   return false;
-  // }
   currentPosition = 0;
-
-  // function setSliderPostion(position) {
-  //   slider.style.transform = `translateX(${position}px)`
-  // };
 
   function touchStart(index) {
     return function (event) {
